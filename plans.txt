@@ -1,0 +1,5 @@
+See if tiff file reads into it properly.
+Get it to print out the tiff file again.
+Copy it so it can be edited
+Nail down a procedure to seperate background from foreground
+rotate so image is horizontal
