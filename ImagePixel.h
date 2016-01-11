@@ -2,6 +2,7 @@
 #define IMAGE_PIXEL_INCLUDED
 class Pixel{
 	public:
+		virtual unsigned char *printPixel();
 		unsigned char getLuminosity(unsigned char r, unsigned char g, unsigned char b);
 };
 
@@ -17,6 +18,9 @@ class RGBPixel: public Pixel{
 		unsigned char getR(){return r}
 		unsigned char getG(){return g}
 		unsigned char getB(){return b}
+		unsigned char *printPixel();//returns a array with the rgb values of the one pixel
+		
+		void upContrast();
 };
 
 //White is 255, black is 0. TIFF photometric interpretation = 1
@@ -31,6 +35,7 @@ class WhitePixel: public Pixel{
 		WhitePixel(RGBPixel convert); //uses luminosity method 
 		
 		unsigned char getVal(){return val}
+		
 };
 
 //White is 0, black is 255. TIFF photometric interpretation = 0

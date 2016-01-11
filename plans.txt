@@ -1,5 +1,6 @@
-See if tiff file reads into it properly.
-Get it to print out the tiff file again.
-Copy it so it can be edited
-Nail down a procedure to seperate background from foreground
-rotate so image is horizontal
+[ ] See if tiff file reads into it properly.
+[x] Get it to print out the tiff file again.
+[X] Copy it so it can be edited
+[X] Make endian namespace
+[ ] Nail down a procedure to seperate background from foreground
+[ ] Rotate so image is horizontal(don't actually rotate, just set a value to tranform it by)

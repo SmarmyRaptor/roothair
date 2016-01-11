@@ -2,6 +2,9 @@ unsigned char Pixel::getLuminosity(unsigned char r, unsigned char g, unsigned ch
 {
 	return r*.21f + .72f*G + 0.07*B
 }
+virtual unsigned char* Pixel::printPixel(){
+	
+}
 
 RGBPixel::RGBPixel(char r, char g, char b)
 {
@@ -9,13 +12,17 @@ RGBPixel::RGBPixel(char r, char g, char b)
 	this->g = g;
 	this-> b = b;
 }
+unsigned char* RGBPixel::printPixel(){
+	unsigned char* ret[3] = {r, g, b};
+	return ret;
+}
 RGBPixel::RGBPixel(RGBPixel copyPixel)
 {
 	this-> r = copyPixel.r;
 	this->g = copyPixel.g;
 	this-> b = copyPixel.b;
 }
-
+void RGBPixel::upContrast();
 WhitePixel::WhitePixel(unsigned char v)
 {
 	val = v;
